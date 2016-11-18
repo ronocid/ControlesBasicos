@@ -23,8 +23,10 @@
         <activity android:name=".ButtonsActivity" />
         <activity android:name=".ImageViewActivity" />
         <activity android:name=".SpinnerActivity" />
-        <activity android:name=".ListViewActivity" />
-        <activity android:name=".GridViewActivity"></activity>
+        <activity android:name=".listview.ListViewActivity" />
+        <activity android:name=".GridViewActivity" />
+        <activity android:name=".listview.SimpleListActivity" />
+        <activity android:name=".listview.CustomListActivity"></activity>
     </application>
 
 </manifest>
