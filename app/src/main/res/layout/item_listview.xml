@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/imgAnimal"
+        android:layout_marginLeft="10dp"
         android:text="TextView" />
 
     <TextView
@@ -29,6 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/imgAnimal"
         android:layout_toRightOf="@+id/imgAnimal"
+        android:layout_marginLeft="10dp"
         android:text="TextView" />
 
 </RelativeLayout>

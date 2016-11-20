@@ -6,9 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.android.curso.controlesbasicos.listview.CustomListActivity">
 
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selección: "/>
+
     <ListView
         android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"></ListView>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/text"></ListView>
 
 </RelativeLayout>

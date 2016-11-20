@@ -2,7 +2,10 @@ package com.android.curso.controlesbasicos.listview;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.android.curso.controlesbasicos.R;
 
@@ -10,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomListActivity extends AppCompatActivity {
+    private TextView textSelection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,11 +21,23 @@ public class CustomListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_custom_list);
 
         ListView listView = (ListView) findViewById(R.id.listview);
+        textSelection = (TextView) findViewById(R.id.text);
 
         List<Animal> items = createListItems();
 
         ListAdapter adapter = new ListAdapter(this,items);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                String selection = ((Animal)adapterView.getAdapter().getItem(position)).getNombre();
+
+                //String selection = ((TextView)view.findViewById(R.id.tvContent)).getText().toString();
+
+                textSelection.setText("Selección: "+selection);
+            }
+        });
     }
 
     private List<Animal> createListItems() {
